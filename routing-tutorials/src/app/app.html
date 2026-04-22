@@ -9,4 +9,19 @@
   </li>
 </ul>
 
+
+<ul *ngIf="httpUsers.length > 0; else loading">
+  <li *ngFor="let user of httpUsers">
+    {{ user.name }}
+  </li>
+</ul>
+
+  
+
+<ng-template #loading>
+  <p>Loading users...</p>
+
+</ng-template>
+
+
 <router-outlet></router-outlet>

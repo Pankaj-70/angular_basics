@@ -2,4 +2,11 @@
 <br>
 <a routerLink="/about">About</a>
 
+
+<ul>
+  <li *ngFor="let product of appProducts">
+    {{product}}
+  </li>
+</ul>
+
 <router-outlet></router-outlet>

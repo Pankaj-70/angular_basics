@@ -1,0 +1,6 @@
+<button (click)="toggleUsers()">Toggle Users</button>
+<ul *ngIf="showUsers">
+    <li *ngFor="let user of users">
+        {{user}}
+    </li>
+</ul>

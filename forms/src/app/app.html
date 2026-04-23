@@ -1,0 +1,13 @@
+<h2>Signup form</h2>
+<input type="text" placeholder="Enter your name" [(ngModel)]="name">
+<input type="email" placeholder="Enter your email" [(ngModel)]="email">
+<input type="hobby" placeholder="Enter your hobby" [formControl]="hobby">
+
+<button (click)="showDetails()">Submit</button>
+
+<h3 *ngIf="!showUser">Enter details for verification</h3>
+<h3 *ngIf="showUser">Hello {{name}} who likes to {{hobby.value}}, we have sent an email to {{email}} for verification</h3>
+<h4>Thank you</h4>
+
+
+<router-outlet></router-outlet>

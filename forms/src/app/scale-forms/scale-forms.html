@@ -1,0 +1,13 @@
+<h1>SignUp Form</h1>
+<form [formGroup]="form">
+    <input type="text" formControlName="name" placeholder="name">
+    <br><br>
+    <div *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+        Name is required
+    </div>
+    <input type="text" formControlName="email" placeholder="email">
+</form>
+
+<p>{{form.value}}</p>
+
+<router-outlet></router-outlet>
